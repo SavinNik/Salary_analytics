@@ -1,8 +1,8 @@
 from fastapi import FastAPI
-from app.endpoints import router
-from core.lifespan import lifespan
+from salary_by_profession.app.endpoints import router
+from salary_by_profession.core.lifespan import lifespan
 import uvicorn
-from db.utils import insert_to_db
+from salary_by_profession.db.utils import insert_to_db
 import asyncio
 
 

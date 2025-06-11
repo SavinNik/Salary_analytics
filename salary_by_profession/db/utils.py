@@ -1,12 +1,17 @@
 import pandas as pd
-from datetime import datetime
+import os
+from pathlib import Path
 from sqlalchemy.exc import IntegrityError
 from .models import Profession, Vacancy
 from .session import Session, init_orm
 
 
-# Чтение данных
-df = pd.read_excel("db/Data.xlsx", sheet_name="full_data_stage_1")
+# Получаем абсолютный путь к файлу
+BASE_DIR = Path(__file__).parent.parent.parent  # Поднимаемся на два уровня вверх от db/utils.py
+DATA_PATH = os.path.join(BASE_DIR, "salary_by_profession", "db", "Data.xlsx")
+
+# Используем правильный путь
+df = pd.read_excel(DATA_PATH, sheet_name="full_data_stage_1")
 
 # Заполнение пропущенных значений пустыми строками
 df = df.fillna("")

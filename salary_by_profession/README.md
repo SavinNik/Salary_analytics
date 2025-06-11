@@ -6,7 +6,7 @@ API для получения информации о зарплатах по IT
 
 Клонируйте репозиторий при помощи Git:
 ```bash
-git clone https://gitlab.com/jobsense/it_salary_analytics
+git clone 
 ```
 
 ### С использованием Docker (рекомендуемый способ)
@@ -24,7 +24,7 @@ git clone https://gitlab.com/jobsense/it_salary_analytics
    docker-compose up --build
    ```
 
-4. Приложение будет доступно по адресу: http://localhost:8000
+4. Приложение будет доступно по адресу: http://localhost:8001
 
 5. Для остановки контейнеров выполните:
    ```bash

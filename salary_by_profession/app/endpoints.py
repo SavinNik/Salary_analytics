@@ -2,9 +2,9 @@ from fastapi import APIRouter, HTTPException
 from sqlalchemy import select
 from sqlalchemy.sql.functions import percentile_cont
 
-from salary_by_profession.app.schemas import ProfessionsResponse, SalaryResponse
+from .schemas import ProfessionsResponse, SalaryResponse
 from fastapi_cache.decorator import cache
-from salary_by_profession.app.dependency import SessionDependency
+from .dependency import SessionDependency
 from salary_by_profession.db.models import Profession, Vacancy
 
 
