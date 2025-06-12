@@ -6,7 +6,7 @@ API для получения информации о зарплатах по IT
 
 Клонируйте репозиторий при помощи Git:
 ```bash
-git clone 
+git clone https://github.com/SavinNik/Salary_analytics
 ```
 
 ### С использованием Docker (рекомендуемый способ)
