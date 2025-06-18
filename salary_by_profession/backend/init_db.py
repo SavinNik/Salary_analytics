@@ -1,5 +1,5 @@
 import asyncio
-from salary_by_profession.db.utils import insert_to_db
+from backend.db.utils import insert_to_db
 
 
 if __name__ == '__main__':

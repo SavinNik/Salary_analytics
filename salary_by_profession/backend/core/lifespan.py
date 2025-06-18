@@ -1,8 +1,8 @@
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
-from salary_by_profession.db.session import init_orm, close_orm
-from salary_by_profession.core.cache import init_cache, close_cache
+from backend.db.session import init_orm, close_orm
+from backend.core.cache import init_cache, close_cache
 
 
 @asynccontextmanager

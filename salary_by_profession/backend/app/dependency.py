@@ -1,5 +1,5 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from salary_by_profession.db.session import Session
+from backend.db.session import Session
 from typing import Annotated
 from fastapi import Depends
 
