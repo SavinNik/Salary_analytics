@@ -1,8 +1,9 @@
 from fastapi import FastAPI
-from backend.app.endpoints import router
-from backend.core.lifespan import lifespan
+from fastapi.middleware.cors import CORSMiddleware
+from app.endpoints import router
+from core.lifespan import lifespan
 import uvicorn
-from backend.db.utils import insert_to_db
+from db.utils import insert_to_db
 import asyncio
 
 
@@ -10,6 +11,14 @@ app = FastAPI(
     title='API for salary_by_profession',
     description='Get professions and salary by profession',
     lifespan=lifespan
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "https://localhost:3000"],   # Разрешенные источники
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization", "Accept"],
 )
 
 app.include_router(router, prefix='/api/v1')

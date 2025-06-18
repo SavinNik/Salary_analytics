@@ -5,12 +5,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
+    env_file:
+      - .env
     environment:
-      - POSTGRES_HOST=postgres
-      - POSTGRES_DB=${POSTGRES_DB}
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - REDIS_HOST=redis
+      - PYTHONPATH=/app
     volumes:
       - ./backend:/app
     depends_on:
@@ -22,11 +20,10 @@ services:
   init-db:
     build:
       context: ./backend
+    env_file:
+      - .env
     environment:
-      - POSTGRES_HOST=postgres
-      - POSTGRES_DB=${POSTGRES_DB}
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - PYTHONPATH=/app
     volumes:
       - ./backend:/app
     command: python init_db.py

@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 
-from backend.db.models import Base
+from db.models import Base
 
 # Подключение к БД
 load_dotenv()

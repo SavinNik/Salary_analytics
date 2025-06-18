@@ -5,7 +5,7 @@ from sqlalchemy.sql.functions import percentile_cont
 from .schemas import ProfessionsResponse, SalaryResponse
 from fastapi_cache.decorator import cache
 from .dependency import SessionDependency
-from backend.db.models import Profession, Vacancy
+from db.models import Profession, Vacancy
 
 
 router = APIRouter()

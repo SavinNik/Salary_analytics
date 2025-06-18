@@ -1,5 +1,5 @@
 import asyncio
-from backend.db.utils import insert_to_db
+from db.utils import insert_to_db
 
 
 if __name__ == '__main__':

@@ -7,8 +7,8 @@ from .session import Session, init_orm
 
 
 # Получаем абсолютный путь к файлу
-BASE_DIR = Path(__file__).parent.parent.parent  # Поднимаемся на два уровня вверх от db/utils.py
-DATA_PATH = os.path.join(BASE_DIR, "salary_by_profession", "db", "Data.xlsx")
+BASE_DIR = Path(__file__).parent.parent
+DATA_PATH = os.path.join(BASE_DIR, "db", "Data.xlsx")
 
 # Используем правильный путь
 df = pd.read_excel(DATA_PATH, sheet_name="full_data_stage_1")

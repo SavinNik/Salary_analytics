@@ -8,7 +8,7 @@ export const FormSend = () => {
 
   // Загрузка списка профессий
   useEffect(() => {
-    fetch("/api/v1/professions")
+    fetch("http://localhost:8000/api/v1/professions")
       .then((response) => response.json())
       .then(data => {
         setProfessions(data.professions);
@@ -29,7 +29,7 @@ export const FormSend = () => {
     if (!selectedPosition) return;
 
     try {
-      const response = await fetch(`/api/v1/salary/${selectedPosition}`);
+      const response = await fetch(`http://localhost:8000/api/v1/salary/${selectedPosition}`);
       if (!response.ok) throw new Error("Профессия не найдена");
 
       const data = await response.json();

@@ -12,6 +12,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Устанавливаем PYTHONPATH
-ENV PYTHONPATH=/app/salary_by_profession/
+ENV PYTHONPATH=/app
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
